@@ -1,9 +1,22 @@
 html {
 	box-sizing: border-box;
 	min-height: 100vh;
+	scroll-behavior: smooth;
+}
+:root {
+  --text-dark: #403F3D;
+  --text-light: #E1D4C9;
+  --text-accent: #B0907A;
+
+  --bg-body: #E1D4C9;
+  --bg-container: #665F55;
+  --bg-backdrop: #403F3DCC;
+
+  --border-light: #C1B6AD;
+  --border-dark: #665F55;
 }
 body {
-	background-color: brown;
+	background-color: var(--bg-body);
 }
 *,
 *::before,
@@ -36,10 +49,15 @@ img {
 }
 /* header */
 .header {
+	padding: 20px 0;
 }
 .header__wrapper {
+	
 }
 .nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .nav__burger {
 	width: 30px;
@@ -57,7 +75,7 @@ img {
 	display: block;
 	width: 100%;
 	height: 3px;
-	background-color: #fff;
+	background-color: var(--text-dark);
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -65,15 +83,100 @@ img {
 	left: 0;
 	margin: auto;
 }
-.nav__content {
+.burger::before, .burger::after{
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: var(--text-dark);
+	position: absolute;
+	left: 0;
+	z-index: 1;
 }
-.nav__list {
+.burger::before {
+	top: -8px;
 }
-.nav__item {
+.burger::after{
+	bottom: -8px;
 }
 .nav__link {
+	color: var(--text-dark);
 }
 .nav__title {
+	color: var(--text-dark);
 }
 .nav__logo {
+	width: 50px;
+	height: 50px;
+}
+/* hero */
+.hero {
+	margin-bottom: 100px;
+}
+
+.hero__content {
+	position: relative;
+	border-radius: 40px;
+	overflow: hidden;
+	padding: 100px;
+}
+.hero__img {
+	position: absolute;
+	inset: 0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.hero__inner {
+	max-width: 700px;
+}
+.hero__title {
+	color: var(--text-light);
+	margin-bottom: 40px;
+	font-size: 62px;
+	font-weight: 600;
+	line-height: 105%;
+	text-shadow: 3px 3px 6px black;
+}
+.hero__text {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 150%;
+	color: var(--text-light);
+	margin-bottom: 40px;
+	text-shadow: 3px 3px 6px black;
+}
+.hero__link {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 150%;
+	width: 200px;
+	background-color: var(--bg-body);
+	color: var(--text-dark);
+	border-radius: 100px;
+	padding: 20px 78px;
+	transition: all 0.4s ease;
+}
+
+.hero__link:hover{
+	background-color: var(--text-dark);
+	color: var(--text-light);
+}
+
+.contents__link {
+	color: rgb(43, 162, 11);
+	transition: all 0.4s ease;
+}
+
+.contents__link:hover {
+	text-decoration: underline;
+}
+
+.contents__list {
+	font-size: 26px;
+}
+
+.contents__title {
+	font-size: 30px;
+	color:  rgb(43, 162, 11);
 }
