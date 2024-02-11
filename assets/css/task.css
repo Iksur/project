@@ -41,3 +41,17 @@ section {
 .task-link:hover {
 	background-color: #ef8700c2;
 }
+
+@media (max-width:576px) {
+	.task-link{
+		bottom: 17px;
+		right: 25px;
+		font-size: 12px;
+	}
+	h1,h2,h3 {
+		font-size: 26px;
+	}
+	p,li,em,strong {
+		font-size: 20px;
+	}
+}

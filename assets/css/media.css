@@ -1,0 +1,35 @@
+@media (max-width:576px){
+	.hero__title{
+		font-size: 40px;
+	}
+	.hero__content{
+		padding: 20px;
+	}
+	.nav__logo{
+		display: none;
+	}
+	.nav__title{
+		font-size: 28px;
+	}
+	.hero__link{
+		padding: 10px 40px;
+	}
+}
+
+@media (max-width:350px){
+	.hero__title{
+		font-size: 25px;
+	}
+	.hero__text{
+		font-size: 16px;
+	}
+	.hero__link{
+		padding: 10px 40px;
+	}
+	.contents__link{
+		font-size: 18px;
+	}
+	.contents__title{
+		font-size: 27px;
+	}
+}
